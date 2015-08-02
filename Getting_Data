@@ -1,0 +1,12 @@
+# Obtain data from UCI database 
+library(RCurl)
+Shroom_file = "https://archive.ics.uci.edu//ml//machine-learning-databases//mushroom//agaricus-lepiota.data"
+# Convert for use in R
+Shroom_url = getURL(Shroom_file)
+# Convert ?s into NAs
+Shroom_data = read.csv(textConnection(Shroom_url), header = FALSE, na.strings="?")
+# Examine data
+head(Shroom_data)
+summary(Shroom_data)
+# Export to local csv file
+wrtie.csv(Shroom_data, "C:/your/location")
