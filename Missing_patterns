@@ -7,3 +7,9 @@ library(VIM)
 a <- aggr(Shroom_data)
 # Barplot of missing data in V12
 barMiss(Shroom_data$V12)
+
+# Create dataframe with complete cases
+
+# Exclude column with the missing values
+
+# Inpute?
