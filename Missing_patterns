@@ -8,8 +8,13 @@ a <- aggr(Shroom_data)
 # Barplot of missing data in V12
 barMiss(Shroom_data$V12)
 
-# Create dataframe with complete cases
+# using dpylr for complete cases
+Shroom_data %>% filter(complete.cases(.))
+
+# Alternative 
+# Creating a new dataframe
+Shroom.complete <- Shroom_data[complete.cases(Shroom_data),]
 
 # Exclude column with the missing values
 
-# Inpute?
+
